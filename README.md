@@ -34,20 +34,20 @@ python2 FamiliaFinder.py SUB yahoo.com -l 2500
 python2 FamiliaFinder.py SUB yahoo.com -s yahoo.txt -t 150
 ```
 ```
-\t -s
-\t    This switch would be followed by the .txt file name you wanna save in
-\t -l
-\t    This switch is selecting limit of the subs have to be checked
-\t -h
-\t    This switch is only submitted one
-\t -t
-\t    This switch is cotrolling the threads number (Suggested=50)
-\t *
-\t    All switches are written in SMALL letters normally
-\t *
-\t    This tool list is getting updated day by day, adding more stuff, options, subs, etc..
-\t *
-\t    For more info aboue HTTP STATUS CODES, Visit: https://github.com/SirBugs/FamiliaSubFinder/StatusCodes.txt
+-s
+   This switch would be followed by the .txt file name you wanna save in
+-l
+   This switch is selecting limit of the subs have to be checked
+-h
+   This switch is only submitted one
+-t
+   This switch is cotrolling the threads number (Suggested=50)
+*
+   All switches are written in SMALL letters normally
+*
+   This tool list is getting updated day by day, adding more stuff, options, subs, etc..
+*
+   For more info aboue HTTP STATUS CODES, Visit: https://github.com/SirBugs/FamiliaSubFinder/StatusCodes.txt
 ```
 # Seeing after running:
 ```
