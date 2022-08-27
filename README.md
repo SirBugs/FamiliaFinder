@@ -49,7 +49,6 @@ python2 FamiliaFinder.py SUB yahoo.com -s yahoo.txt -t 150
 \t *
 \t    For more info aboue HTTP STATUS CODES, Visit: https://github.com/SirBugs/FamiliaSubFinder/StatusCodes.txt
 ```
-
 # Seeing after running:
 ```
 	Current InUse Tool: SUB
@@ -76,7 +75,17 @@ python2 FamiliaFinder.py SUB yahoo.com -s yahoo.txt -t 150
 	[02:04:42] 503 (1775) : public.grab.com
 	...
 ```
-
+# Seutp:
+* For manual installation, The tool link is: https://github.com/SirBugs/FamiliaFinder/
+* Installing with clone
+```
+git clone https://github.com/SirBugs/FamiliaFinder.git
+```
+* Install the dependencies in a virtualenv
+```
+cd FamiliaFinder
+pip install -r requirements.txt
+```
 
 # Notes:
 https://crt.sh/ has a limit, So don't spam using the tool, U gonna get blocked !!!1
