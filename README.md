@@ -34,6 +34,7 @@ FamiliaFinder is a subdomains mass searcher, looking about subdomains in source 
 	[02:04:42] 503 (1775) : public.grab.com
 	...
 ```
+![](./running.png)
 
 # Running:
 * Viewing Help
