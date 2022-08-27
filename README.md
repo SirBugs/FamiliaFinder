@@ -8,33 +8,6 @@ FamiliaFinder is a subdomains mass searcher, looking about subdomains in source 
 # Compatibility:
 - Python 2.7
 
-# Seeing after running:
-```
-	Current InUse Tool: SUB
-	Subdomains List Current Size: 15074
-	Method: GET
-	Threads: 100
-	Target: grab.com
-	[02:04:35] STARTING BRUTE!
-
-	[02:04:38] 403 (354) : food.grab.com
-	[02:04:39] 404 (531) : partner-api2.grab.com
-	[02:04:39] 404 (636) : daxexp.grab.com
-	[02:04:39] 403 (731) : vendor-portal.grab.com
-	[02:04:40] 403 (996) : gamma-ge-dashboard.grab.com
-	[02:04:40] 403 (1176) : aries.grab.com
-	[02:04:40] 403 (1231) : image.mkt.grab.com
-	[02:04:41] 200 (1293) : commerce.grab.com
-	[02:04:41] 403 (1482) : segments-ui.grab.com
-	[02:04:41] 403 (1531) : hodor-assets.grab.com
-	[02:04:42] 200 (1622) : developer.grab.com
-	[02:04:42] 200 (1662) : supernova.ext.grab.com
-	[02:04:42] 200 (1711) : admiral.grab.com
-	[02:04:42] 200 (1718) : concierge.grab.com
-	[02:04:42] 503 (1775) : public.grab.com
-	...
-```
-
 # Running:
 * Viewing Help
 ```
@@ -75,6 +48,33 @@ python2 FamiliaFinder.py SUB yahoo.com -s yahoo.txt -t 150
 \t    This tool list is getting updated day by day, adding more stuff, options, subs, etc..
 \t *
 \t    For more info aboue HTTP STATUS CODES, Visit: https://github.com/SirBugs/FamiliaSubFinder/StatusCodes.txt
+```
+
+# Seeing after running:
+```
+	Current InUse Tool: SUB
+	Subdomains List Current Size: 15074
+	Method: GET
+	Threads: 100
+	Target: grab.com
+	[02:04:35] STARTING BRUTE!
+
+	[02:04:38] 403 (354) : food.grab.com
+	[02:04:39] 404 (531) : partner-api2.grab.com
+	[02:04:39] 404 (636) : daxexp.grab.com
+	[02:04:39] 403 (731) : vendor-portal.grab.com
+	[02:04:40] 403 (996) : gamma-ge-dashboard.grab.com
+	[02:04:40] 403 (1176) : aries.grab.com
+	[02:04:40] 403 (1231) : image.mkt.grab.com
+	[02:04:41] 200 (1293) : commerce.grab.com
+	[02:04:41] 403 (1482) : segments-ui.grab.com
+	[02:04:41] 403 (1531) : hodor-assets.grab.com
+	[02:04:42] 200 (1622) : developer.grab.com
+	[02:04:42] 200 (1662) : supernova.ext.grab.com
+	[02:04:42] 200 (1711) : admiral.grab.com
+	[02:04:42] 200 (1718) : concierge.grab.com
+	[02:04:42] 503 (1775) : public.grab.com
+	...
 ```
 
 
