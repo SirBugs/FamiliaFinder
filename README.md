@@ -52,6 +52,14 @@ python2 FamiliaFinder.py SUB yahoo.com -s yahoosubdomains.txt
 ```
 python2 FamiliaFinder.py SUB yahoo.com -t 100
 ```
+* Set a limit for how many subs should be checked from the mass list (First Step)
+```
+python2 FamiliaFinder.py SUB yahoo.com -l 2500
+```
+* You can use more than a switch like
+```
+python2 FamiliaFinder.py SUB yahoo.com -s yahoo.txt -t 150
+```
 ```
 \t -s
 \t    This switch would be followed by the .txt file name you wanna save in
