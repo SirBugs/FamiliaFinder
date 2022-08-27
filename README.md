@@ -92,4 +92,4 @@ pip install -r requirements.txt
 # Notes:
 https://crt.sh/ has a limit, So don't spam using the tool, U gonna get blocked !!!1
 
-Visit My [@Twitter](https://twitter.com/SirBagoza), [@Github](https://github.com/SirBugs)
+Visit My [@Twitter](https://twitter.com/SirBagoza), [@Github](https://github.com/SirBugs), [@Hackerone](https://hackerone.com/sirbagoza?type=user)
