@@ -32,7 +32,17 @@ FamiliaFinder is a subdomains mass searcher, looking about subdomains in source 
 	[02:04:42] 503 (1775) : public.grab.com
 ```
 
-# Switches:
+# Running:
+```
+python2 FamiliaFinder.py SUB yahoo.com
+>> Normal Usage
+
+python2 FamiliaFinder.py SUB yahoo.com -s yahoosubdomains.txt
+>> Saving the results in a .txt file
+
+python2 FamiliaFinder.py SUB yahoo.com -t 100
+>> Selecting the threads to 100
+```
 ```
 \t -s
 \t    This switch would be followed by the .txt file name you wanna save in
@@ -49,19 +59,6 @@ FamiliaFinder is a subdomains mass searcher, looking about subdomains in source 
 \t *
 \t    For more info aboue HTTP STATUS CODES, Visit: https://github.com/SirBugs/FamiliaSubFinder/StatusCodes.txt
 ```
-
-# Running:
-```
-python2 FamiliaFinder.py SUB yahoo.com
->> Normal Usage
-
-python2 FamiliaFinder.py SUB yahoo.com -s yahoosubdomains.txt
->> Saving the results in a .txt file
-
-python2 FamiliaFinder.py SUB yahoo.com -t 100
->> Selecting the threads to 100
-```
-
 
 
 
