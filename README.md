@@ -36,6 +36,10 @@ FamiliaFinder is a subdomains mass searcher, looking about subdomains in source 
 ```
 
 # Running:
+* Viewing Help
+```
+python2 FamiliaFinder.py -h
+```
 * Normal Usage
 ```
 python2 FamiliaFinder.py SUB yahoo.com
