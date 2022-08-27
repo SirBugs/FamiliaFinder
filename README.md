@@ -44,7 +44,7 @@ python2 FamiliaFinder.py SUB yahoo.com
 ```
 python2 FamiliaFinder.py SUB yahoo.com -s yahoosubdomains.txt
 ```
-Selecting the threads to 100
+* Setting the threads to 100
 ```
 python2 FamiliaFinder.py SUB yahoo.com -t 100
 ```
