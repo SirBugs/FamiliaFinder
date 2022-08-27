@@ -95,6 +95,10 @@ def CheckDomainCRTSH(domain):
                     print(Fore.RED + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + "FAIL" + " ({}) : ".format(str(Sets)) + i)
                     Subdomains.append(i)
                     Sets+=1
+                    if SavingSwitch == "ON":
+                        file = open(AfterS+".txt", "a+")
+                        file.write("FAIL: " + i + "\n")
+                        file.close()
                     pass
 
 subdomains = requests.get("https://noisyyy.xyz/subs.doms.xmap.txt", verify=False).content.split("\n")
