@@ -36,15 +36,17 @@ FamiliaFinder is a subdomains mass searcher, looking about subdomains in source 
 ```
 
 # Running:
+* Normal Usage
 ```
 python2 FamiliaFinder.py SUB yahoo.com
->> Normal Usage
-
+```
+* Saving the results in a .txt file
+```
 python2 FamiliaFinder.py SUB yahoo.com -s yahoosubdomains.txt
->> Saving the results in a .txt file
-
+```
+Selecting the threads to 100
+```
 python2 FamiliaFinder.py SUB yahoo.com -t 100
->> Selecting the threads to 100
 ```
 ```
 \t -s
