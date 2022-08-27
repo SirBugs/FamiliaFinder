@@ -2,9 +2,11 @@
 FamiliaFinder is a subdomains mass searcher, looking about subdomains in source + subdomains from a mass list of subdomains containing 15K subdomains + Using https://crt.sh
 
 # requirements:
-- Python 2.7
 - requests
 - colorama
+
+# Compatibility:
+- Python 2.7
 
 # Seeing after running:
 ```
@@ -30,6 +32,7 @@ FamiliaFinder is a subdomains mass searcher, looking about subdomains in source 
 	[02:04:42] 200 (1711) : admiral.grab.com
 	[02:04:42] 200 (1718) : concierge.grab.com
 	[02:04:42] 503 (1775) : public.grab.com
+	...
 ```
 
 # Running:
@@ -61,4 +64,6 @@ python2 FamiliaFinder.py SUB yahoo.com -t 100
 ```
 
 
+# Notes:
+https://crt.sh/ has a limit, So don't spam using the tool, U gonna get blocked !!!1
 
