@@ -77,6 +77,7 @@ python2 FamiliaFinder.py SUB yahoo.com -s yahoo.txt -t 150
 ```
 # Seutp:
 * For manual installation, The tool link is: https://github.com/SirBugs/FamiliaFinder/
+* 
 * Installing with clone
 ```
 git clone https://github.com/SirBugs/FamiliaFinder.git
@@ -86,7 +87,6 @@ git clone https://github.com/SirBugs/FamiliaFinder.git
 cd FamiliaFinder
 pip install -r requirements.txt
 ```
-
 # Notes:
 https://crt.sh/ has a limit, So don't spam using the tool, U gonna get blocked !!!1
 
