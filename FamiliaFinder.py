@@ -1,4 +1,4 @@
-import requests, time, os, sys, re
+import requests, time, os, sys, re, socket
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
 from multiprocessing.pool import ThreadPool
@@ -25,25 +25,26 @@ def CheckDomainSubsMap(sub):
     global SavingSwitch, LimiterSwitch, SelectedDomain, AfterT, AfterL, AfterS, Done, Subdomains, sets
     try:
         req = requests.get("https://" + sub + "." + SelectedDomain, timeout=5, verify=False)
+        IP = socket.gethostbyname(sub + "." + SelectedDomain)
         if req.status_code == 200:
-            print(Fore.GREEN + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Done)) + sub + "." + SelectedDomain)
+            print(Fore.GREEN + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Done)) + sub + "." + SelectedDomain + Fore.YELLOW + " ->> ({})".format(IP))
         elif req.status_code == 301 or req.status_code == 302:
-            print(Fore.WHITE + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Done)) + sub + "." + SelectedDomain)
+            print(Fore.WHITE + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Done)) + sub + "." + SelectedDomain + Fore.YELLOW + " ->> ({})".format(IP))
         elif req.status_code == 400 or req.status_code == 401:
-            print(Fore.CYAN + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Done)) + sub + "." + SelectedDomain)
+            print(Fore.CYAN + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Done)) + sub + "." + SelectedDomain + Fore.YELLOW + " ->> ({})".format(IP))
         elif req.status_code == 403 or req.status_code == 404:
-            print(Fore.RED + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Done)) + sub + "." + SelectedDomain)
+            print(Fore.RED + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Done)) + sub + "." + SelectedDomain + Fore.YELLOW + " ->> ({})".format(IP))
         elif req.status_code == 405 or req.status_code == 406:
-            print(Fore.BLUE + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Done)) + sub + "." + SelectedDomain)
+            print(Fore.BLUE + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Done)) + sub + "." + SelectedDomain + Fore.YELLOW + " ->> ({})".format(IP))
         else:
-            print(Fore.MAGENTA + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Done)) + sub + "." + SelectedDomain)
+            print(Fore.MAGENTA + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Done)) + sub + "." + SelectedDomain + Fore.YELLOW + " ->> ({})".format(IP))
         if SavingSwitch == "ON":
             if sub+"."+SelectedDomain in Subdomains:
                 pass
             else:
                 Subdomains.append(sub+"."+SelectedDomain)
                 file = open(AfterS+".txt", "a+")
-                file.write(str(req.status_code) + ": " + sub + "." + SelectedDomain + "\n")
+                file.write(str(req.status_code) + ": " + sub+"."+SelectedDomain + " ->> " + IP + "\n")
                 file.close()
         Done+1
     except:
@@ -72,21 +73,22 @@ def CheckDomainCRTSH(domain):
             else:
                 try:
                     req = requests.get("https://" + i, timeout=5, verify=False)
+                    IP = socket.gethostbyname(i)
                     if req.status_code == 200:
-                        print(Fore.GREEN + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Sets)) + i)
+                        print(Fore.GREEN + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Sets)) + i + Fore.YELLOW + " ->> ({})".format(IP))
                     elif req.status_code == 301 or req.status_code == 302:
-                        print(Fore.WHITE + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Sets)) + i)
+                        print(Fore.WHITE + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Sets)) + i + Fore.YELLOW + " ->> ({})".format(IP))
                     elif req.status_code == 400 or req.status_code == 401:
-                        print(Fore.CYAN + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Sets)) + i)
+                        print(Fore.CYAN + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Sets)) + i + Fore.YELLOW + " ->> ({})".format(IP))
                     elif req.status_code == 403 or req.status_code == 404:
-                        print(Fore.RED + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Sets)) + i)
+                        print(Fore.RED + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Sets)) + i + Fore.YELLOW + " ->> ({})".format(IP))
                     elif req.status_code == 405 or req.status_code == 406:
-                        print(Fore.BLUE + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Sets)) + i)
+                        print(Fore.BLUE + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Sets)) + i + Fore.YELLOW + " ->> ({})".format(IP))
                     else:
-                        print(Fore.MAGENTA + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Sets)) + i)
+                        print(Fore.MAGENTA + "\t[{}] ".format(datetime.now().strftime("%H:%M:%S")) + str(req.status_code) + " ({}) : ".format(str(Sets)) + i + Fore.YELLOW + " ->> ({})".format(IP))
                     if SavingSwitch == "ON":
                         file = open(AfterS+".txt", "a+")
-                        file.write(str(req.status_code) + ": " + i + "\n")
+                        file.write(str(req.status_code) + ": " + i + " ->> " + IP + "\n")
                         file.close()
                     Subdomains.append(i)
                     Sets+=1
